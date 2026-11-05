@@ -257,4 +257,4 @@ As orientações de acessibilidade devem considerar a documentação oficial e o
 
 **Instituição de formação:** SENAI-RS — Santa Cruz do Sul
 
-*Documentação técnica e descritiva do projeto educacional Habit
+*Documentação técnica e descritiva do projeto educacional Habit Tracker.*
