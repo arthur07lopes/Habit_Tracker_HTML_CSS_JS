@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Painel pessoal para cadastrar hábitos e acompanhar o progresso diário.">
+    <title>Ritmo | Painel de hábitos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/habit.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+    <header class="site-header">
+        <div class="page-shell header-inner">
+            <a class="brand" href="#inicio" aria-label="Ritmo, início">
+                <span class="brand-mark" aria-hidden="true">R</span>
+                <span>RITMO</span>
+            </a>
+            <div class="header-actions">
+                <nav class="main-nav" aria-label="Navegação principal">
+                    <a href="#habits">Hábitos</a>
+                    <a href="#progress">Progresso</a>
+                </nav>
+                <button
+                    id="theme-toggle"
+                    class="theme-toggle"
+                    type="button"
+                    aria-pressed="false">
+                    Ativar tema escuro
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" class="page-shell">
+        <section id="inicio" class="hero" aria-labelledby="page-title">
+            <div class="hero-copy">
+                <p class="eyebrow">HABIT TRACKER / PAINEL PESSOAL</p>
+                <h1 id="page-title">Pequenas ações.<br><span>Progresso real.</span></h1>
+                <p class="hero-description">
+                    Registre hábitos possíveis, acompanhe o que concluiu hoje
+                    e veja seu progresso em um só lugar.
+                </p>
+                <a class="hero-link" href="#habit-name">Adicionar meu primeiro hábito</a>
+            </div>
+            <figure class="hero-visual">
+                <img
+                    src="assets/images/habit-runner.jpg"
+                    alt="Caderno aberto com uma página de acompanhamento de hábitos escrita à mão."
+                    width="4422"
+                    height="6633"
+                    loading="lazy">
+                <figcaption>Organização visual para acompanhar pequenas ações.</figcaption>
+            </figure>
+        </section>
+
+        <div class="dashboard-grid">
+            <section id="habits" class="panel habits-panel" aria-labelledby="habits-title">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">ROTINA DIÁRIA</p>
+                        <h2 id="habits-title">Seus hábitos</h2>
+                    </div>
+                    <span id="habit-count" class="count-pill">0 hábitos</span>
+                </div>
+
+                <form id="habit-form" class="habit-form">
+                    <label for="habit-name">Nome do novo hábito</label>
+                    <div class="form-row">
+                        <input
+                            id="habit-name"
+                            name="habit"
+                            type="text"
+                            maxlength="60"
+                            autocomplete="off"
+                            placeholder="Ex.: Ler por 15 minutos"
+                            aria-describedby="habit-help"
+                            required>
+                        <button class="primary-button" type="submit">Adicionar hábito</button>
+                    </div>
+                    <p id="habit-help" class="field-help">Use um nome curto e claro. Até 60 caracteres.</p>
+                </form>
+
+                <ul id="habit-list" class="habit-list" aria-label="Hábitos cadastrados">
+                    <li class="empty-state">Você ainda não cadastrou hábitos.</li>
+                </ul>
+            </section>
+
+            <aside id="progress" class="panel progress-panel" aria-labelledby="progress-title">
+                <p class="eyebrow">RESUMO DO DIA</p>
+                <h2 id="progress-title">Progresso de hoje</h2>
+                <p id="progress-number" class="progress-number">0%</p>
+                <label id="progress-label" class="progress-label" for="daily-progress">Hábitos concluídos hoje</label>
+                <progress id="daily-progress" value="0" max="1" aria-labelledby="progress-label">0%</progress>
+                <p id="progress-text" class="progress-text">0 de 0 hábitos concluídos hoje (0%).</p>
+                <p class="progress-note">O progresso é atualizado quando você marca ou desmarca um hábito.</p>
+            </aside>
+        </div>
+
+        <p class="privacy-note">
+            Seus registros ficam armazenados neste navegador. Eles não são enviados
+            automaticamente para uma conta ou para o GitHub.
+        </p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page-shell footer-inner">
+            <p>Projeto educacional SENAI-RS</p>
+            <p>HTML · CSS · JavaScript</p>
+        </div>
+    </footer>
+
+    <p id="status-message" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+</body>
+</html>
